@@ -2,6 +2,7 @@ package DataTypes;
 
 /**
  * Created by sven_ on 03/03/2016.
+ * Only works for positive numbers currently
  */
 public class HanArrayList {
 
@@ -26,7 +27,7 @@ public class HanArrayList {
             increaseArraySize();
         }
         list[pointer] = value;
-        while(list[pointer] != -1) {
+        while(list[pointer] != -1 && pointer < list.length - 1) {
             pointer++;
         }
     }
@@ -41,7 +42,7 @@ public class HanArrayList {
         }
         list[index] = value;
         if(index == pointer) {
-            while(list[pointer] != -1) {
+            while(list[pointer] != -1 && pointer < list.length - 1) {
                 pointer++;
             }
         }
