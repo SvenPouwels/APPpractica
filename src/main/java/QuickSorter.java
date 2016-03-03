@@ -1,4 +1,4 @@
-package han.ica.asd;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.List;
 public class QuickSorter {
 
     public static int[] sortArray(int[] a) {
-        List<Integer> ints = new ArrayList<>();
+        List<Integer> ints = new ArrayList<Integer>();
         for(int i: a) {
             ints.add(i);
         }
@@ -23,9 +23,9 @@ public class QuickSorter {
     private static void quickSort(List<Integer> items) {
         if (items.size() > 1) {
             int pivot;
-            List<Integer> smaller = new ArrayList<>();
-            List<Integer> same = new ArrayList<>();
-            List<Integer> larger = new ArrayList<>();
+            List<Integer> smaller = new ArrayList<Integer>();
+            List<Integer> same = new ArrayList<Integer>();
+            List<Integer> larger = new ArrayList<Integer>();
 
             int center = items.size() / 2;
 

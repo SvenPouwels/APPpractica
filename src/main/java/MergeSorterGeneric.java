@@ -1,4 +1,3 @@
-package han.ica.asd;
 
 /**
  * Created by Sven on 16-Feb-16.

@@ -1,4 +1,3 @@
-package han.ica.asd;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +8,7 @@ import java.util.List;
 public class QuickSorterGeneric<T> {
 
     public <T extends Comparable<T>> T[] sortArray(T[] a) {
-        List<T> list = new ArrayList<>();
+        List<T> list = new ArrayList<T>();
         for(T i: a) {
             list.add(i);
         }
@@ -23,9 +22,9 @@ public class QuickSorterGeneric<T> {
     private <T extends Comparable<T>> void quickSort(List<T> items) {
         if (items.size() > 1) {
             T pivot;
-            List<T> smaller = new ArrayList<>();
-            List<T> same = new ArrayList<>();
-            List<T> larger = new ArrayList<>();
+            List<T> smaller = new ArrayList<T>();
+            List<T> same = new ArrayList<T>();
+            List<T> larger = new ArrayList<T>();
 
             int center = items.size() / 2;
 
