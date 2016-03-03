@@ -2,14 +2,14 @@
 /**
  * Created by Sven on 16-Feb-16.
  */
-public class MergeSorterGeneric<T> {
-    public <T extends Comparable<T>> T[] sortArray(T[] a) {
+public class MergeSorterGeneric<T extends Comparable<T>> {
+    public T[] sortArray(T[] a) {
         T[] tmpArray = (T[]) new Comparable[a.length];
         mergeSort(a, tmpArray, 0, a.length - 1);
         return a;
     }
 
-    private <T extends Comparable<T>> void mergeSort(T[] a, T[] tmpArray, int left, int right) {
+    private void mergeSort(T[] a, T[] tmpArray, int left, int right) {
         if (left < right) {
             int center = (left + right) /2;
             mergeSort(a, tmpArray, left, center);
@@ -19,7 +19,7 @@ public class MergeSorterGeneric<T> {
     }
 
 
-    private <T extends Comparable<T>> void merge(T[] a, T[] tmpArray, int left, int center, int right) {
+    private void merge(T[] a, T[] tmpArray, int left, int center, int right) {
         int leftEnd = center - 1;
         int rightEnd = right;
         int leftPointer = left;

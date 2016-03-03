@@ -1,3 +1,5 @@
+import DataTypes.HanArrayList;
+
 import java.util.Arrays;
 
 public class Main {
@@ -27,7 +29,7 @@ public class Main {
         Integer[] iSortGeneric = is.sortArray(testNumbers4);
         System.out.println(Arrays.toString(iSortGeneric));
 
-        MergeSorterGeneric<Integer> ms = new MergeSorterGeneric<Integer>();
+        QuickSorterGeneric<Integer> ms = new QuickSorterGeneric<Integer>();
         Integer[] testNumbers5 = {8, 6, 0, 7, 5, 3, 1};
         Integer[] mSortGeneric = ms.sortArray(testNumbers5);
         System.out.println(Arrays.toString(mSortGeneric));
@@ -36,5 +38,9 @@ public class Main {
         Integer[] testNumbers6 = {8, 6, 0, 7, 5, 3, 1};
         Integer[] qSortGeneric = qs.sortArray(testNumbers6);
         System.out.println(Arrays.toString(qSortGeneric));
+
+        String[] test = { "EEE", "CCC", "FFF", "AAA"};
+        MergeSorterGeneric<String> sis = new MergeSorterGeneric<String>();
+        System.out.println(Arrays.toString(sis.sortArray(test)));
     }
 }
