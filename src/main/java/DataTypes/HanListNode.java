@@ -3,15 +3,15 @@ package DataTypes;
 /**
  * Created by sven_ on 03/03/2016.
  */
-public class HanListNode {
-    private Object value;
+public class HanListNode<T> {
+    private T value;
     private HanListNode next;
 
-    public HanListNode(Object value) {
+    public HanListNode(T value) {
         this.value = value;
     }
 
-    public HanListNode(Object value, HanListNode next) {
+    public HanListNode(T value, HanListNode next) {
         this.value = value;
         this.next = next;
     }
@@ -22,5 +22,13 @@ public class HanListNode {
 
     public HanListNode getNextNode() {
         return next;
+    }
+
+    public T getValue() {
+        return value;
+    }
+
+    public void setValue(T value) {
+        this.value = value;
     }
 }

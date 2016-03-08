@@ -1,16 +1,16 @@
-
+package Sorters;
 
 /**
  * Created by Sven on 16-Feb-16.
  */
-public class MergeSorter {
-    public static int[] sortArray(int[] a) {
-        int[] tmpArray = new int[a.length];
+public class MergeSorterGeneric<T extends Comparable<T>> {
+    public T[] sortArray(T[] a) {
+        T[] tmpArray = (T[]) new Comparable[a.length];
         mergeSort(a, tmpArray, 0, a.length - 1);
         return a;
     }
 
-    private static void mergeSort(int[] a, int[] tmpArray, int left, int right) {
+    private void mergeSort(T[] a, T[] tmpArray, int left, int right) {
         if (left < right) {
             int center = (left + right) /2;
             mergeSort(a, tmpArray, left, center);
@@ -20,7 +20,7 @@ public class MergeSorter {
     }
 
 
-    private static void merge(int[] a, int[] tmpArray, int left, int center, int right) {
+    private void merge(T[] a, T[] tmpArray, int left, int center, int right) {
         int leftEnd = center - 1;
         int rightEnd = right;
         int leftPointer = left;
@@ -28,7 +28,7 @@ public class MergeSorter {
         int tmpPointer = left;
 
         while (leftPointer <= leftEnd && rightPointer <= rightEnd)
-            if (a[leftPointer] <= a[rightPointer]){
+            if (a[leftPointer].compareTo(a[rightPointer]) <= 0){
                 tmpArray[tmpPointer] = a[leftPointer];
                 tmpPointer++;
                 leftPointer++;

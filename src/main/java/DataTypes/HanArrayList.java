@@ -61,4 +61,18 @@ public class HanArrayList {
             list[i] = tmpArray[i];
         }
     }
+
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("[");
+
+        for(int i = 0; i<list.length; i++) {
+            if(i < list.length - 1)
+                builder.append(list[i] + ", ");
+            else
+                builder.append(list[i] + "]");
+        }
+
+        return builder.toString();
+    }
 }
